@@ -1,13 +1,33 @@
 package edu.pasadena.cs.cs03b;
 
+import java.util.Scanner;
+
 public class MonthConversion {
 
     public static void main(String[] args) {
-        int month = 0;
+        Scanner scanner = new Scanner(System.in);
 
-        month = Integer.parseInt(args[0]);
-        String strMonth = MonthConversion.convertMonthWithSwitch(month);
-        System.out.println("The month is " + strMonth);
+        char ans;
+
+        do {
+            int monthUsingSwitch = 0, monthUsingNestedIf = 0;
+
+            System.out.println("Enter a integer numbers for month using switch: ");
+            monthUsingSwitch = scanner.nextInt();
+
+            System.out.println("Enter a integer number for month using nested if");
+            monthUsingNestedIf = scanner.nextInt();
+
+            String strMonth = MonthConversion.convertMonthWithSwitch(monthUsingSwitch);
+            String strMonthNI = MonthConversion.convertMonthWithNestedIf(monthUsingNestedIf);
+
+            System.out.println("Switch, the month is " + strMonth);
+            System.out.println("Nested If, the month is " + strMonthNI);
+
+            System.out.println("Press Y for another calculation");
+            ans = scanner.next().charAt(0);
+        } while (ans == 'y' || ans == 'Y');
+
     }
 
     // TODO: complete the implementation with nested if
@@ -17,11 +37,11 @@ public class MonthConversion {
         if (nMonth == 1) {
             monthString = "January";
         } else if (nMonth == 2) {
-            monthString = "Feburary";
+            monthString = "February";
         } else if (nMonth == 3) {
             monthString = "March";
         } else if (nMonth == 4) {
-            monthString = "Aprial";
+            monthString = "April";
         } else if (nMonth == 5) {
             monthString = "May";
         } else if (nMonth == 6) {

@@ -11,26 +11,25 @@ import java.io.*;
 
 public class TestMonthConversion {
 
-   @Test
-   public void testMonthConversionWithSwitch()
-   {
-     // action
-     String strResult = MonthConversion.convertMonthWithSwitch(1);
-     // assertion
-     assertEquals("January", strResult);
+  @Test
+  public void testMonthConversionWithSwitch() {
+    // action
+    String strResult = MonthConversion.convertMonthWithSwitch(1);
+    // assertion
+    assertEquals("January", strResult);
 
-     // TODO: Add more test cases from February to November
+    // TODO: Add more test cases from February to November
 
-     strResult = MonthConversion.convertMonthWithSwitch(12);
-     // assertion
-     assertEquals("December", strResult);
+    strResult = MonthConversion.convertMonthWithSwitch(12);
+    // assertion
+    assertEquals("December", strResult);
 
-     strResult = MonthConversion.convertMonthWithSwitch(13);
-     // assertion
-     assertEquals("No Such Month", strResult);     
+    strResult = MonthConversion.convertMonthWithSwitch(13);
+    // assertion
+    assertEquals("No Such Month", strResult);
 
-   }
+  }
 
-   // TODO: add another test method to test the nested if implementation
-  
+  // TODO: add another test method to test the nested if implementation
+
 }
